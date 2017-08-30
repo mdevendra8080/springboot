@@ -1,10 +1,13 @@
 package com.example;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 
@@ -25,9 +28,9 @@ public class CustomerController {
 	 */
 
 	@RequestMapping(method = RequestMethod.GET)
-	public @ResponseBody String create() {
+	public @ResponseBody List<Customer> create(@RequestParam(required=true,name="id")  Long id) {
 		// return accountServiceFacde.create(account);
 
-		return "Datasource :::DEVENDRA";
+		return service.findById(id); //"Datasource :::DEVENDRA";
 	}
 }

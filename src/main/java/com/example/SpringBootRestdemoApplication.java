@@ -45,8 +45,8 @@ public class SpringBootRestdemoApplication {
 						"oracle.jdbc.OracleDriver");
 				resource.setProperty("url",
 						"jdbc:oracle:thin:@localhost:1521:orcl");
-				resource.setProperty("password", "scott");
-				resource.setProperty("username", "tiger");				
+				resource.setProperty("password", "tiger");
+				resource.setProperty("username", "scott");				
 
 				context.getNamingResources().addResource(resource);
 			}
