@@ -19,5 +19,25 @@ CONSTRAINT "CUSTOMER_ID_PK" PRIMARY KEY (CUSTOMER_ID));
                                                 <groupId>commons-dbcp</groupId>
                                                 <artifactId>commons-dbcp</artifactId>
                                 </dependency>
+5] Create package 
+CREATE PACKAGE CUSTOMER_PKG AS 
+PROCEDURE GET_CUSTOMER_DETAILS_BY_ID (
+	    v_id   	IN NUMBER,		
+      result          	OUT SYS_REFCURSOR
+		);
+END CUSTOMER_PKG;
 
+
+create  PACKAGE BODY CUSTOMER_PKG AS
+PROCEDURE GET_CUSTOMER_DETAILS_BY_ID (
+	    v_id   	IN NUMBER,		
+      result          	OUT SYS_REFCURSOR
+)
+IS
+BEGIN
+			OPEN result FOR
+				SELECT 	*
+				FROM 	CUSTOMER WHERE Customer_Id = v_id;
+END GET_CUSTOMER_DETAILS_BY_ID;
+END CUSTOMER_PKG;
 
