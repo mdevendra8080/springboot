@@ -1,0 +1,74 @@
+
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<style type="text/css">
+th, td {
+    padding: 10px;
+    font-size: small;
+}
+</style>
+<title>Insert title here</title>
+</head>
+<body>
+
+	<form action="" method="post">
+		<table style="width: 50%; height: 50%;  border-style:dotted; border-color: orange;" >
+			<caption style="background: orange;  text-align:center; text-transform: capitalize; font-size:large;">Save Customer</caption>
+			<tr>
+				<th>NAME</th>
+				<th>EMAIL ID</th>
+				<th>REGISTRATION DATE</th>
+			</tr>
+			<tr>
+				<td align="center"><input type="text" name="name" maxlength="100"/></td>
+				<td align="center"><input type="text" name="emailid" maxlength="100"/></td>
+				<td align="center"><input type="text" name="rdate" value="YYYY-MM-DD"/></td>
+			</tr>
+			<tr>
+				<td align="center" colspan="3">
+				<input type="submit" value="Save"/>
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="reset" />
+				</td>
+			</tr>
+		</table>
+	</form>
+	<br/>
+	<form action="" method="post">
+		<table style="width: 50%; height: 50%;  border-style:dotted; border-color: olive;" >
+			<caption style="background: olive;  text-align:center; text-transform: capitalize; font-size:large;">Search by Customer ID</caption>
+			<tr>
+				<th>Customer Id : <input type="text" name="custId" maxlength="100"/></th>
+				<th><input type="Submit"  value="Search"/></th>
+				<th><input type="reset" /></th>
+			</tr>
+		</table>
+	</form>
+	
+	<br/>
+	<form action="" method="post">
+		<table style="width: 50%; height: 50%;  border-style:dotted; border-color: orange;" >
+			<caption style="background: orange;  text-align:center; text-transform: capitalize; font-size:large;">Search by Registration Date</caption>
+			<tr>
+				<th>Registration Date: <input type="text" name="rdate" value="YYYY-MM-DD"/></th>
+				<th><input type="Submit"  value="Search"/></th>
+				<th><input type="reset" /></th>
+			</tr>
+		</table>
+	</form>
+	
+	<br/>
+	<form action="" method="post">
+		<table style="width: 50%; height: 50%;  border-style:dotted; border-color: olive;" >
+			<caption style="background: olive;  text-align:center; text-transform: capitalize; font-size:large;">Delete Customer by Customer ID</caption>
+			<tr>
+				<th>Registration Date: <input type="text" name="rdate" value="YYYY-MM-DD"/></th>
+				<th><input type="Submit"  value="Search"/></th>
+				<th><input type="reset" /></th>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

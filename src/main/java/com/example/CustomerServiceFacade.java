@@ -32,7 +32,7 @@ public class CustomerServiceFacade {
 			st.setString(4, custData.getDate());
 			st.execute();
 			status = true;
-			// .executeUpdate(sql);
+			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			status = false;
@@ -42,11 +42,9 @@ public class CustomerServiceFacade {
 		}
 
 		return (status == true ? custData.getName() + " CUSTOMER SAVED" : "FAILED Customer");
-
-		// return "Hi Customer::"+custData.getName();
 	}
 
-	public List<Customer> findById(Long id) {
-		return customerDao.findById(id);
+	public List<Customer> findById(Long id1, Long id2) {
+		return customerDao.findCustomer(id1, id2);
 	}
 }

@@ -1,5 +1,8 @@
 package com.example;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Customer {
 
 	// "customer_seq" is Oracle sequence name.

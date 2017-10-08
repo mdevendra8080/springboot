@@ -28,9 +28,8 @@ public class CustomerController {
 	 */
 
 	@RequestMapping(method = RequestMethod.GET)
-	public @ResponseBody List<Customer> create(@RequestParam(required=true,name="id")  Long id) {
-		// return accountServiceFacde.create(account);
-
-		return service.findById(id); //"Datasource :::DEVENDRA";
+	public @ResponseBody List<Customer> create(@RequestParam(required=true,name="v_id1")  Long id1,
+			@RequestParam(required=true,name="v_id2")  Long id2) {
+				return service.findById(id1,id2); //"Datasource :::DEVENDRA";
 	}
 }
